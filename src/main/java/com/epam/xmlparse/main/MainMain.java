@@ -2,24 +2,26 @@ package main.java.com.epam.xmlparse.main;
 
 import main.java.com.epam.xmlparse.builder.AbstractBankBuilder;
 import main.java.com.epam.xmlparse.builder.BanksBuilderFactory;
+import main.java.com.epam.xmlparse.entity.Bank;
 import main.java.com.epam.xmlparse.exception.CustomException;
 import main.java.com.epam.xmlparse.validator.ValidatorXml;
+import java.util.Set;
 
 public class MainMain {
     public static void main(String[] args) {
-//        BanksBuilderFactory banksBuilderFactory = new BanksBuilderFactory();
-//        AbstractBankBuilder abstractBankBuilder = banksBuilderFactory.createBankBuilder("staX");
-//        try {
-//            abstractBankBuilder.buildSetBanks("./src/resources/Banks.xml");
-//        } catch (CustomException e) {
-//            System.out.println("Main");
-//        }
-//        System.out.println(abstractBankBuilder.getBanks());
-
-
-
-
+        AbstractBankBuilder abstractBankBuilder;
+        Set<Bank> banks;
         ValidatorXml validatorXml = new ValidatorXml();
-        System.out.println(validatorXml.isValid("./src/resources/Banks.xml", "./src/resources/Banks.xsd"));
+        try {
+            if (validatorXml.isValid("./src/main/resources/Banks.xml", "./src/main/resources/Banks.xsd")) {
+                BanksBuilderFactory banksBuilderFactory = new BanksBuilderFactory();
+                abstractBankBuilder = banksBuilderFactory.createBankBuilder("staX");
+                abstractBankBuilder.buildSetBanks("./src/main/resources/Banks.xml");
+                banks = abstractBankBuilder.getBanks();
+
+            }
+        } catch (CustomException w) {
+            System.out.println(w.getMessage());
+        }
     }
 }

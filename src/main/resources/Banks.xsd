@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/banks"
+        xmlns:tns="http://www.example.com/banks"
+        elementFormDefault="qualified">
+    <element name="banks">
+        <complexType>
+            <sequence>
+                <element name="bank" type="tns:Bank" minOccurs="1"
+                         maxOccurs="16"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Bank">
+        <sequence>
+            <element name="country" type="tns:country" minOccurs="0"/>
+            <element name="type" type="tns:Type"/>
+            <element ref="tns:abstract-depositor"/>
+            <element name="account-id" type="tns:account-id"/>
+            <element name="amount-of-deposit" type="positiveInteger"/>
+            <element name="profitability" type="double"/>
+            <element name="time-constraint" type="tns:time-constraint"/>
+        </sequence>
+        <attribute name="name" type="tns:bankName" use="required" />
+        <attribute name="country" type="tns:country" use="optional" default="unknown"/>
+    </complexType>
+
+    <simpleType name="bankName">
+        <restriction base="string">
+            <pattern value="[a-zA-Z\s]{2,}"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="depositor">
+        <sequence>
+            <element name="name" type="tns:name"/>
+            <element name="sure-name" type="tns:sureName"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="PersonDepositor">
+        <complexContent>
+            <extension base="tns:depositor">
+                <sequence>
+                    <element name="age" type="tns:age"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="LegalEntityDepositor">
+        <complexContent>
+            <extension base="tns:depositor">
+                <sequence>
+                    <element name="UNP" type="tns:UNP"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="UNP">
+        <restriction base="string">
+            <pattern value="[A-Z]{2}[0-9]{6}"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="age">
+        <restriction base="positiveInteger">
+            <minInclusive value="18"/>
+            <maxInclusive value="99"/>
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="name">
+        <restriction base="string">
+            <pattern value="[a-zA-Z]{3,}"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="sureName">
+        <restriction base="string">
+            <pattern value="[a-zA-Z]{2,}"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="country">
+        <restriction base="string">
+            <pattern value="[a-zA-Z]{2,}"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Type">
+        <restriction base="string">
+            <enumeration value="on demand deposit"/>
+            <enumeration value="settlement deposit"/>
+            <enumeration value="term deposit"/>
+            <enumeration value="cumulative deposit"/>
+            <enumeration value="savings deposit"/>
+            <enumeration value="metal deposit"/>
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="account-id">
+        <restriction base="ID">
+            <pattern value="[A-Z0-9]{16}"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="amount-of-deposit">
+        <restriction base="positiveInteger">
+            <minInclusive value="1"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="profitability">
+        <restriction base="double">
+            <minInclusive value="0.1"/>
+            <maxInclusive value="100"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="time-constraint">
+        <restriction base="dateTime">
+            <pattern value="\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d"/>
+        </restriction>
+    </simpleType>
+
+    <element name="abstract-depositor" type="tns:depositor" abstract="true"/>
+    <element name="person-depositor" type="tns:PersonDepositor" substitutionGroup="tns:abstract-depositor"/>
+    <element name="legal-depositor" type="tns:LegalEntityDepositor" substitutionGroup="tns:abstract-depositor"/>
+</schema>

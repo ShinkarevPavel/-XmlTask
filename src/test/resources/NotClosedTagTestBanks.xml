@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<banks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.example.com/banks"
+       xsi:schemaLocation="http://www.example.com/banks TestBanks.xsd">
+
+    <bank name="MTB" country="Belarus">
+        <type>on demand deposit</type>
+        <person-depositor>
+            <name>Pavel</name>
+            <sure-name>Shinkarev</sure-name>
+            <age>35</age>
+        </person-depositor>
+        <account-id>BY85R87422U00152</account-id>
+        <amount-of-deposit>3265</amount-of-deposit>
+        <profitability>3.2</profitability>
+        <time-constraint>2022-10-01T13:40:00</time-constraint>
+    </bank>
+    <bank name="HSBC Holdings" country="UK">
+        <type>settlement deposit</type>
+        <legal-depositor>
+            <name>David</name>
+            <sure-name>Gilmour</sure-name>
+            <UNP>PF000061</UNP>
+        </legal-depositor>
+        <account-id>YK00PINK0FLOYD04</account-id>
+        <amount-of-deposit>1188963</amount-of-deposit>
+        <profitability>1.9</profitability>
+        <time-constraint>2025-08-11T03:41:00</time-constraint>
+    </bank>
+    <bank name="Priorbank">
+        <type>term deposit</type>
+        <person-depositor>
+            <name>Mary</name>
+            <sure-name>Fast</sure-name>
+            <age>22</age>
+        </person-depositor>
+        <account-id>BE1000087422YY02</account-id>
+        <amount-of-deposit>118963</amount-of-deposit>
+        <profitability>2.2</profitability>
+        <time-constraint>2022-11-12T15:00:00</time-constraint>
+    </bank>
+    <bank name="ICBC" country="Chins">
+        <type>cumulative deposit</type>
+        <person-depositor>
+            <name>Jackie</name>
+            <sure-name>Chan</sure-name>
+            <age>65</age>
+        </person-depositor>
+        <account-id>CH10R0087413YY02</account-id>
+        <amount-of-deposit>108963</amount-of-deposit>
+        <profitability>4.2</profitability>
+        <time-constraint>2023-09-08T14:49:00</time-constraint>
+    </bank>
+    <bank name="Bank of America" country="USA">
+        <type>savings deposit</type>
+        <legal-depositor>
+            <name>Chuck</name>
+            <sure-name>Norris</sure-name>
+            <UNP>AR850081</UNP>
+        </legal-depositor>
+        <account-id>USA0R0087413YY02</account-id>
+        <amount-of-deposit>1001063</amount-of-deposit>
+        <profitability>1.2</profitability>
+        <time-constraint>2032-01-08T14:47:00</time-constraint>
+    </bank>
+    <bank name="Mitsubishi UFJ Financial Group">
+        <type>metal deposit</type>
+        <person-depositor>
+            <name>Akie</name>
+            <sure-name>Suzuki</sure-name>
+            <age>61</age>
+        </person-depositor>
+        <account-id>JA00R0187413WY02</account-id>
+        <amount-of-deposit>35863</amount-of-deposit>
+        <profitability>1.0</profitability>
+        <time-constraint>2022-03-21T15:44:00</time-constraint>
+    </bank>
+    <bank name="Citigroup">
+        <type>term deposit</type>
+        <legal-depositor>
+            <name>Paul</name>
+            <sure-name>McCartney</sure-name
+            <UNP>BE000081</UNP>
+        </legal-depositor>
+        <account-id>USA0BEATLES3WY02</account-id>
+        <amount-of-deposit>1080863</amount-of-deposit>
+        <profitability>34.0</profitability>
+        <time-constraint>2024-12-01T14:43:00</time-constraint>
+    </bank>
+    <bank name="BNP Paribas" country="France">
+        <type>savings deposit</type>
+        <person-depositor>
+            <name>Napoleon</name>
+            <sure-name>Bonaparte</sure-name>
+            <age>18</age>
+        </person-depositor>
+        <account-id>FR2000000003WY02</account-id>
+        <amount-of-deposit>1080863</amount-of-deposit>
+        <profitability>0.1</profitability>
+        <time-constraint>2030-04-21T15:48:00</time-constraint>
+    </bank>
+    <bank name="Goldman Sachs">
+        <type>on demand deposit</type>
+        <person-depositor>
+            <name>Ozzy</name>
+            <sure-name>Osbourne</sure-name>
+            <age>21</age>
+        </person-depositor>
+        <account-id>USA00357CR03WY02</account-id>
+        <amount-of-deposit>5010863</amount-of-deposit>
+        <profitability>2.1</profitability>
+        <time-constraint>2022-02-20T14:45:00</time-constraint>
+    </bank>
+    <bank name="Wells Fargo">
+        <type>metal deposit</type>
+        <legal-depositor>
+            <name>James</name>
+            <sure-name>Hatfield</sure-name>
+            <UNP>MT110081</UNP>
+        </legal-depositor>
+        <account-id>USARE367CR039Y02</account-id>
+        <amount-of-deposit>893000</amount-of-deposit>
+        <profitability>2.7</profitability>
+        <time-constraint>2025-07-21T14:47:00</time-constraint>
+    </bank>
+    <bank name="Bank of Communications">
+        <type>cumulative deposit</type>
+        <person-depositor>
+            <name>Jhon</name>
+            <sure-name>Lennon</sure-name>
+            <age>21</age>
+        </person-depositor>
+        <account-id>CH0REUSSRR039Y02</account-id>
+        <amount-of-deposit>1003000</amount-of-deposit>
+        <profitability>2.8</profitability>
+        <time-constraint>2021-05-08T13:44:00</time-constraint>
+    </bank>
+    <bank name="Banco Santander" country="Spain">
+        <type>settlement deposit</type>
+        <person-depositor>
+            <name>Bruce</name>
+            <sure-name>Lee</sure-name>
+            <age>85</age>
+        </person-depositor>
+        <account-id>SP0111S0RP039Y14</account-id>
+        <amount-of-deposit>100500</amount-of-deposit>
+        <profitability>1.8</profitability>
+        <time-constraint>2022-12-22T12:22:00</time-constraint>
+    </bank>
+    <bank name="Norinchukin Bank">
+        <type>term deposit</type>
+        <person-depositor>
+            <name>Eric</name>
+            <sure-name>Clapton</sure-name>
+            <age>87</age>
+        </person-depositor>
+        <account-id>JA4411S0YP039Y04</account-id>
+        <amount-of-deposit>401500</amount-of-deposit>
+        <profitability>1.2</profitability>
+        <time-constraint>2024-10-13T17:40:00</time-constraint>
+    </bank>
+    <bank name="Credit Mutuel">
+        <type>metal deposit</type>
+        <person-depositor>
+            <name>Jimmy</name>
+            <sure-name>Page</sure-name>
+            <age>84</age>
+        </person-depositor>
+        <account-id>FR3401LEDP039YZ4</account-id>
+        <amount-of-deposit>42578</amount-of-deposit>
+        <profitability>1.1</profitability>
+        <time-constraint>2021-07-20T16:11:00</time-constraint>
+    </bank>
+    <bank name="UniCredit" country="Italy">
+        <type>cumulative deposit</type>
+        <person-depositor>
+            <name>Jimmy</name>
+            <sure-name>Hendrix</sure-name>
+            <age>85</age>
+        </person-depositor>
+        <account-id>IT34000000009YZ4</account-id>
+        <amount-of-deposit>92171</amount-of-deposit>
+        <profitability>1.9</profitability>
+        <time-constraint>2021-11-11T11:41:00</time-constraint>
+    </bank>
+    <bank name="Sberbank">
+        <type>term deposit</type>
+        <legal-depositor>
+            <name>Yriu</name>
+            <sure-name>Shenchuk</sure-name>
+            <UNP>DD150081</UNP>
+        </legal-depositor>
+        <account-id>RU00000000000Y04</account-id>
+        <amount-of-deposit>1</amount-of-deposit>
+        <profitability>0.1</profitability>
+        <time-constraint>2021-09-11T11:00:00</time-constraint>
+    </bank>
+</banks>

@@ -1,6 +1,6 @@
 package main.java.com.epam.xmlparse.builder;
 
-import main.java.com.epam.xmlparse.type.BuilderType;
+import main.java.com.epam.xmlparse.builder.type.BuilderType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

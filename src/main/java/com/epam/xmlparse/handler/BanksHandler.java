@@ -1,10 +1,9 @@
 package main.java.com.epam.xmlparse.handler;
 
-import main.java.com.epam.xmlparse.builder.BanksSaxBuilder;
 import main.java.com.epam.xmlparse.entity.*;
-import main.java.com.epam.xmlparse.type.BankType;
-import main.java.com.epam.xmlparse.type.DepositType;
-import main.java.com.epam.xmlparse.type.DepositorType;
+import main.java.com.epam.xmlparse.builder.type.BankType;
+import main.java.com.epam.xmlparse.builder.type.DepositType;
+import main.java.com.epam.xmlparse.builder.type.DepositorType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.Attributes;

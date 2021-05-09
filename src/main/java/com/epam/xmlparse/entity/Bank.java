@@ -1,6 +1,6 @@
 package main.java.com.epam.xmlparse.entity;
 
-import main.java.com.epam.xmlparse.type.DepositType;
+import main.java.com.epam.xmlparse.builder.type.DepositType;
 import java.time.LocalDateTime;
 
 public class Bank {

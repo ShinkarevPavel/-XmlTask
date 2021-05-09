@@ -1,5 +1,6 @@
 package main.java.com.epam.xmlparse.validator;
 
+import main.java.com.epam.xmlparse.exception.CustomException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
@@ -17,7 +18,7 @@ public class ValidatorXml {
 
     private static Logger logger = LogManager.getLogger();
 
-    public boolean isValid(String xmlPath, String xsdPath){
+    public boolean isValid(String xmlPath, String xsdPath) throws CustomException{
         boolean flag = false;
         String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
         SchemaFactory factory = SchemaFactory.newInstance(language);
@@ -32,9 +33,8 @@ public class ValidatorXml {
         }catch (SAXException e){
             logger.error("xml is not valid " + e.getMessage());
         }catch (IOException w){
-            logger.error("xml is not valid " + w.getMessage());
+            throw new CustomException("Issue with provided path " + w.getMessage());
         }
-
         return flag;
     }
 }

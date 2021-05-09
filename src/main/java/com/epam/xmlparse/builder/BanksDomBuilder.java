@@ -1,9 +1,9 @@
 package main.java.com.epam.xmlparse.builder;
 
 import main.java.com.epam.xmlparse.entity.*;
-import main.java.com.epam.xmlparse.type.BankType;
-import main.java.com.epam.xmlparse.type.DepositType;
-import main.java.com.epam.xmlparse.type.DepositorType;
+import main.java.com.epam.xmlparse.builder.type.BankType;
+import main.java.com.epam.xmlparse.builder.type.DepositType;
+import main.java.com.epam.xmlparse.builder.type.DepositorType;
 import main.java.com.epam.xmlparse.exception.CustomException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

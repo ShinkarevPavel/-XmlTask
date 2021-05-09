@@ -22,9 +22,15 @@
             <element name="profitability" type="double"/>
             <element name="time-constraint" type="tns:time-constraint"/>
         </sequence>
-        <attribute name="name" type="string" use="required" />
-        <attribute name="country" type="string" use="optional" default="unknown"/>
+        <attribute name="name" type="tns:bankName" use="required" />
+        <attribute name="country" type="tns:country" use="optional" default="unknown"/>
     </complexType>
+
+    <simpleType name="bankName">
+        <restriction base="string">
+            <pattern value="[a-zA-Z\s]{2,}"/>
+        </restriction>
+    </simpleType>
 
     <complexType name="depositor">
         <sequence>
@@ -102,13 +108,13 @@
             <pattern value="[A-Z0-9]{16}"/>
         </restriction>
     </simpleType>
-    
+
     <simpleType name="amount-of-deposit">
         <restriction base="positiveInteger">
             <minInclusive value="1"/>
         </restriction>
     </simpleType>
-    
+
     <simpleType name="profitability">
         <restriction base="double">
             <minInclusive value="0.1"/>

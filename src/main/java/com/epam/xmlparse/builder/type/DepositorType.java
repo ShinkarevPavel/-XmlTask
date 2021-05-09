@@ -1,4 +1,4 @@
-package main.java.com.epam.xmlparse.type;
+package main.java.com.epam.xmlparse.builder.type;
 
 public enum DepositorType {
     NAME("name"),
